@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: url('http://l.j-factor.com/gifs/LittleWheel-Crane.gif') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+form {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    max-width: 600px;
+    margin: 60px auto;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    animation: slideUp 1s ease-out;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+}
+
+button {
+    background-color: #ffaa00;
+    color: #000;
+    font-weight: bold;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ffcc33;
+}
+
+/* Simple animation */
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.truck-animation {
+    position: relative;
+    animation: driveTruck 8s linear infinite;
+    margin-left: 20px;
+}
+
+@keyframes driveTruck {
+    0% { left: -200px; }
+    100% { left: 100%; }
+}
+
