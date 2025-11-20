@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Truck Monitoring System</title>
+  <style>
+    body {
+      font-family: Arial;
+      background-color: #f1f1f1;
+      display: flex;
+      justify-content: center;
+      padding: 50px;
+    }
+    form {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px;
+      width: 100%;
+      background-color: #2e8b57;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <form action="/submit" method="post">
+    <h2>Truck Entry</h2>
+    <input type="text" name="truck_number" placeholder="Truck Number" required />
+    <input type="text" name="driver_name" placeholder="Driver Name" required />
+    <input type="text" name="expected_route" placeholder="Expected Route (e.g. A to B)" required />
+    <input type="text" name="actual_route" placeholder="Actual Route Taken" required />
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
+
