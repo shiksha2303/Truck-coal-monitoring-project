@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Truck Dashboard</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #f9f9f9;
+      padding: 20px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      background: white;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: center;
+    }
+    th {
+      background-color: #2e8b57;
+      color: white;
+    }
+    h2 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+    a {
+      text-decoration: none;
+      background: #2e8b57;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Truck Monitoring Dashboard</h2>
+  <a href="/">Add New Entry</a>
+  <br><br>
+  <table>
+    <tr>
+      <th>Time</th>
+      <th>Truck Number</th>
+      <th>Driver</th>
+      <th>Expected Route</th>
+      <th>Actual Route</th>
+      <th>Status</th>
+    </tr>
+    {% for entry in entries %}
+    <tr>
+      <td>{{ entry['Timestamp'] }}</td>
+      <td>{{ entry['Truck Number'] }}</td>
+      <td>{{ entry['Driver Name'] }}</td>
+      <td>{{ entry['Expected Route'] }}</td>
+      <td>{{ entry['Actual Route'] }}</td>
+      <td>{{ entry['Status'] }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>
